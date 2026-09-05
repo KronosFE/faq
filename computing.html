@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — Computing & De-risking — Kronos Fusion Energy</title>
+<meta name="description" content="FAQ on the Hyperion breeder: what a breeder is, why a spherical tokamak, why negative triangularity, how it runs without a central solenoid, what tritium breeding ratio means, and why it makes no net-electricity claim.">
+<meta name="keywords" content="Hyperion breeder FAQ, spherical tokamak, negative triangularity, tritium breeding ratio, solenoid free, no central solenoid, platform, Kronos Fusion Energy">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="author" content="Kronos Fusion Energy"><meta name="copyright" content="© 2026 Kronos Fusion Energy. All rights reserved.">
+<link rel="canonical" href="https://kronosfusionenergy.com/faq/breeder">
+<meta property="og:title" content="FAQ — The Breeder (Hyperion)"><meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is a breeder and what does Hyperion breed?","acceptedAnswer":{"@type":"Answer","text":"Hyperion is a spherical tokamak designed as a materials platform. It breeds tritium and produces isotopes; its defining gate is tritium self-sufficiency, not net electricity."}},
+{"@type":"Question","name":"Why a spherical tokamak?","acceptedAnswer":{"@type":"Answer","text":"Low aspect ratio gives a compact, high-beta configuration. Combined with negative triangularity it suppresses the turbulence that drives heat out of the plasma."}},
+{"@type":"Question","name":"What is negative triangularity?","acceptedAnswer":{"@type":"Answer","text":"A plasma cross-section shaped so its corner points outward (delta = -0.30), the opposite of a conventional tokamak. Nonlinear gyrokinetics (CGYRO) shows it reduces turbulent transport."}},
+{"@type":"Question","name":"How does it run without a central solenoid?","acceptedAnswer":{"@type":"Answer","text":"A large bootstrap current from the plasma's own pressure gradient, topped up by RF current drive, sustains 9.66 MA non-inductively. Removing the solenoid is what makes the compact spherical geometry possible."}},
+{"@type":"Question","name":"What is the tritium breeding ratio?","acceptedAnswer":{"@type":"Answer","text":"The ratio of tritium produced to tritium consumed. Above one means self-sufficient. Hyperion reaches up to 1.42 on-model, computed with OpenMC neutronics."}},
+{"@type":"Question","name":"Does Hyperion produce net electricity?","acceptedAnswer":{"@type":"Answer","text":"No, and it makes no such claim. It is a platform measured in tritium and isotopes. That honest gate is stated everywhere."}}
+]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#232c39;--panel:#2a3441;--band:#1b232e;--line:#26303c;--gold:#d4ad5c;--blue:#5ea0c0;--ink:#e0e5eb;--mut:#8fa0b8;--green:#7bc47f}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:14px 20px 90px}
+.crumb{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--mut);margin-bottom:6px}
+.crumb a{color:var(--gold);text-decoration:none}
+.kick{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.2em;color:var(--gold)}
+h1{font-size:38px;line-height:1.1;margin:.2em 0 .2em;letter-spacing:-.01em}
+.sub{color:var(--mut);max-width:74ch;line-height:1.6;font-size:15.5px}
+.hero{border-bottom:1px solid var(--line);padding:16px 0 26px;margin-bottom:18px}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin:10px 0;overflow:hidden}
+details summary{cursor:pointer;padding:15px 46px 15px 18px;font-weight:600;font-size:15.5px;color:var(--ink);list-style:none;position:relative}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";position:absolute;right:18px;top:14px;color:var(--gold);font-family:'Space Mono',monospace;font-size:18px}
+details[open] summary::after{content:"–"}
+details summary:hover{color:var(--gold)}
+.a{padding:0 18px 16px;color:#c6d0dc;font-size:14px;line-height:1.65}
+.a a{color:var(--gold)}.a .mono{font-family:'Space Mono',monospace}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;text-decoration:none;font:600 14px 'Space Grotesk';padding:11px 16px;border-radius:8px;border:1px solid var(--line);color:var(--gold)}
+.btn.pri{background:#7a1420;color:#fff;border-color:#7a1420}
+footer{margin-top:30px;color:#6b7f93;font-size:12px;font-style:italic;border-top:1px solid var(--line);padding-top:14px}
+em{color:var(--gold);font-style:normal}
+</style><link rel="stylesheet" href="kfe-shell.css"><script src="kfe-shell.js" defer></script>
+</head>
+<body><div class="wrap">
+<div class="hero"><div class="crumb"><a href="/faq">FAQ</a> · Computing & De-risking</div><span class="kick">KRONOS FUSION ENERGY · FAQ</span><h1>Computing & De-risking</h1><p class="sub">How the physics and engineering are computed, and why the results are reproducible.</p></div>
+<details open><summary>How do you compute all of this?</summary><div class="a">On our in-house HPC — the “Kronos box” — from first principles. Exact dimensions come from the CAD kernel reading the STEP solids of the design.</div></details>
+<details><summary>Which codes do you run?</summary><div class="a">CGYRO (turbulent transport), OpenMC (neutronics / tritium breeding), Quantum ESPRESSO (materials, DFT), ASCOT5 (alpha-particle confinement), FreeGS (equilibrium), and a large Monte-Carlo uncertainty campaign.</div></details>
+<details><summary>Is it reproducible?</summary><div class="a">Yes. The De-Risking Register and the underlying codes are published, so the results are independently re-runnable. Reproducibility is a first-class goal, not an afterthought.</div></details>
+<details><summary>Do you use GPUs?</summary><div class="a">Today’s canonical physics runs on the in-house HPC; GPU acceleration is the next phase of the computing program. The cinematic 3D renders are produced separately on cloud GPUs.</div></details>
+<details><summary>Can outside people run the models?</summary><div class="a">Lightweight public solvers are available to explore the physics; the heavier solvers run internally.</div></details>
+</div></body></html>

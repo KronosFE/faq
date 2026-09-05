@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — Science &amp; De-Risking — Kronos Fusion Energy</title>
+<meta name="description" content="Science and de-risking FAQ: how Kronos knows its design works, which codes it uses, whether the results are peer-reviewed and reproducible, what the de-risking register is, and how the AI/ML layer relates to the physics.">
+<meta name="keywords" content="fusion de-risking FAQ, how do you know it works, CGYRO OpenMC, reproducible fusion, de-risking register, peer review, AI ML fusion, verification validation, Kronos Fusion Energy">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="author" content="Kronos Fusion Energy"><meta name="copyright" content="© 2026 Kronos Fusion Energy. All rights reserved.">
+<link rel="canonical" href="https://kronosfusionenergy.com/faq/science">
+<meta property="og:title" content="FAQ — Science &amp; De-Risking"><meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do you know the design works?","acceptedAnswer":{"@type":"Answer","text":"Every binding physics question was re-run on established, community-benchmarked codes and tied to a numbered gate in an open de-risking register - 164 gates in all, with 141 interactive validators that recompute on demand."}},
+{"@type":"Question","name":"Which codes do you use?","acceptedAnswer":{"@type":"Answer","text":"CGYRO for turbulence, OpenMC for neutronics, ASCOT5 for fast ions, FreeGS for equilibrium, NIMROD for MHD, CQL3D/GENRAY for current drive, TMAP8 for tritium, ALARA/TALYS/NJOY for activation, Xolotl/RustBCA for materials, and Quantum-ESPRESSO for DFT - all open source."}},
+{"@type":"Question","name":"Is it peer-reviewed and reproducible?","acceptedAnswer":{"@type":"Answer","text":"The design is published as a 44-paper series with permanent DOIs and archived data, so headline numbers can be regenerated. Independent reproduction is explicitly welcomed."}},
+{"@type":"Question","name":"Is this AI-modeled fusion?","acceptedAnswer":{"@type":"Answer","text":"No. The physics comes from the established codes. AI/ML sits alongside as method - surrogates, control, prediction - never as the source of the physics."}},
+{"@type":"Question","name":"What is the De-Risking Register?","acceptedAnswer":{"@type":"Answer","text":"A public list of the 164 binding physics gates - the claim, the code, and the basis for each - the spine the whole program hangs on, with a permanent DOI."}}
+]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#232c39;--panel:#2a3441;--band:#1b232e;--line:#26303c;--gold:#d4ad5c;--blue:#5ea0c0;--ink:#e0e5eb;--mut:#8fa0b8;--green:#7bc47f}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:14px 20px 90px}
+.crumb{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--mut);margin-bottom:6px}
+.crumb a{color:var(--gold);text-decoration:none}
+.kick{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.2em;color:var(--gold)}
+h1{font-size:38px;line-height:1.1;margin:.2em 0 .2em;letter-spacing:-.01em}
+.sub{color:var(--mut);max-width:74ch;line-height:1.6;font-size:15.5px}
+.hero{border-bottom:1px solid var(--line);padding:16px 0 26px;margin-bottom:18px}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin:10px 0;overflow:hidden}
+details summary{cursor:pointer;padding:15px 46px 15px 18px;font-weight:600;font-size:15.5px;color:var(--ink);list-style:none;position:relative}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";position:absolute;right:18px;top:14px;color:var(--gold);font-family:'Space Mono',monospace;font-size:18px}
+details[open] summary::after{content:"–"}
+details summary:hover{color:var(--gold)}
+.a{padding:0 18px 16px;color:#c6d0dc;font-size:14px;line-height:1.65}
+.a a{color:var(--gold)}.a .mono{font-family:'Space Mono',monospace}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;text-decoration:none;font:600 14px 'Space Grotesk';padding:11px 16px;border-radius:8px;border:1px solid var(--line);color:var(--gold)}
+.btn.pri{background:#7a1420;color:#fff;border-color:#7a1420}
+footer{margin-top:30px;color:#6b7f93;font-size:12px;font-style:italic;border-top:1px solid var(--line);padding-top:14px}
+em{color:var(--gold);font-style:normal}
+</style><link rel="stylesheet" href="kfe-shell.css"><script src="kfe-shell.js" defer></script>
+</head>
+<body><div class="wrap">
+<div class="hero"><div class="crumb"><a href="/faq">FAQ</a> · Science &amp; De-Risking</div>
+<span class="kick">KRONOS FUSION ENERGY · FAQ</span>
+<h1>Science &amp; de-risking</h1>
+<p class="sub">How the design is known to work, what tools produced it, and how you can check it. Canon-locked, no financials.</p></div>
+
+<details open><summary>How do you know the design works?</summary><div class="a">Every binding physics question was re-run from first principles on established codes and tied to a numbered gate in an open register — <span class="mono">164</span> gates, with <a href="/Physics-Validation-Live_Simulation/"><span class="mono">141</span> interactive validators</a> that recompute on demand. The full method is in <a href="/computing">How We Compute</a>, and how each result is qualified is in the <a href="/verification-validation">V&amp;V matrix</a>.</div></details>
+<details><summary>Which codes do you use?</summary><div class="a">The same open, community-benchmarked tools the field uses: <a href="/codes/cgyro">CGYRO</a> (turbulence), <a href="/codes/openmc">OpenMC</a> (neutronics), <a href="/codes/ascot5">ASCOT5</a> (fast ions), <a href="/codes/freegs">FreeGS</a> (equilibrium), <a href="/codes/nimrod">NIMROD</a> (MHD), <a href="/codes/cql3d">CQL3D·GENRAY</a> (current drive), <a href="/codes/tmap8">TMAP8</a> (tritium), <a href="/codes/alara">ALARA·TALYS·NJOY</a> (activation), <a href="/codes/xolotl">Xolotl·RustBCA</a> (materials) and Quantum-ESPRESSO (DFT). No proprietary physics engine.</div></details>
+<details><summary>Is it peer-reviewed and reproducible?</summary><div class="a">The design is published as a <a href="/publications">44-paper series</a> with permanent DOIs and archived data, so headline numbers regenerate from named scripts under a fixed seed. The open <a href="https://github.com/KronosFE/kronos-toolkit">KRONOS Research Toolkit</a> recomputes the design anchors on a clean install. Independent reproduction is welcomed — see <a href="/reproducibility">reproducibility</a>.</div></details>
+<details><summary>Is this "AI-modeled" fusion?</summary><div class="a"><strong>No.</strong> The physics comes from the established codes. The AI/ML layer sits <em>alongside</em> as method — surrogates that speed the search, a control stack, disruption prediction — <em>never</em> as the source of the physics. A quoted number is a full-physics calculation, not a model's guess. See <a href="/codes/ai-ml">the methods layer</a>.</div></details>
+<details><summary>What is the De-Risking Register?</summary><div class="a">A public register of the <span class="mono">164</span> binding physics gates — the claim, the code and the basis for each — with a permanent DOI (<span class="mono">10.5281/zenodo.22133057</span>). It's the spine the whole program hangs on. <a href="/publications/de-risking-register">Open it</a>.</div></details>
+<details><summary>How were the confinement claims cross-checked?</summary><div class="a">The negative-triangularity confinement benefit was re-run with nonlinear gyrokinetics not only on our own geometry but on <em>representative</em> DIII-D-NT and TCV-like shapes (from published values) — a first-principles cross-check on independent shapes. We're explicit that these are representative geometries, not named-shot reconstructions.</div></details>
+<details><summary>Where should I start if I'm a physicist?</summary><div class="a"><a href="/computing">How We Compute</a> for the method, <a href="/verification-validation">V&amp;V &amp; Uncertainty</a> for the qualification, <a href="/theory-methods">Theory &amp; Methods</a> for the equations, and <a href="/codes">The Codes</a> for the per-code deep-dives.</div></details>
+
+<div class="btns"><a class="btn pri" href="/faq">All FAQs</a><a class="btn" href="/science">Science &amp; evidence</a><a class="btn" href="/verification-validation">V&amp;V matrix</a><a class="btn" href="/contact">Talk to us</a></div>
+<footer>© 2026 Kronos Fusion Energy. All rights reserved. · kronosfusionenergy.com · FAQ · canon-locked to the  · conceptual engineering program.</footer>
+</div></body></html>

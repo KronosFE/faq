@@ -42,9 +42,9 @@ em{color:var(--gold);font-style:normal}
 </head>
 <body><div class="wrap">
 <div class="hero"><div class="crumb"><a href="/faq">FAQ</a> · Computing & De-risking</div><span class="kick">KRONOS FUSION ENERGY · FAQ</span><h1>Computing & De-risking</h1><p class="sub">How the physics and engineering are computed, and why the results are reproducible.</p></div>
-<details open><summary>How do you compute all of this?</summary><div class="a">On our in-house HPC — the “Kronos box” — from first principles. Exact dimensions come from the CAD kernel reading the STEP solids of the design.</div></details>
+<details open><summary>How do you compute all of this?</summary><div class="a">On an extensive NVIDIA GPU HPC platform (A100 / H100), with an in-house HPC node for reduced-order work and the CAD build — all from first principles. Exact dimensions come from the CAD kernel reading the STEP solids of the design.</div></details>
 <details><summary>Which codes do you run?</summary><div class="a">CGYRO (turbulent transport), OpenMC (neutronics / tritium breeding), Quantum ESPRESSO (materials, DFT), ASCOT5 (alpha-particle confinement), FreeGS (equilibrium), and a large Monte-Carlo uncertainty campaign.</div></details>
 <details><summary>Is it reproducible?</summary><div class="a">Yes. The De-Risking Register and the underlying codes are published, so the results are independently re-runnable. Reproducibility is a first-class goal, not an afterthought.</div></details>
-<details><summary>Do you use GPUs?</summary><div class="a">Today’s canonical physics runs on the in-house HPC; GPU acceleration is the next phase of the computing program. The cinematic 3D renders are produced separately on cloud GPUs.</div></details>
+<details><summary>Do you use GPUs?</summary><div class="a">Yes — the heavy physics runs on an extensive NVIDIA GPU HPC platform (A100 / H100): CGYRO turbulence, OpenMC neutronics, DFT/materials and the Phase-3 FEA/CFD. An in-house HPC node handles reduced-order and analytic work plus the CAD build. The cinematic 3D renders run on GPU on a line kept separate from the physics.</div></details>
 <details><summary>Can outside people run the models?</summary><div class="a">Lightweight public solvers are available to explore the physics; the heavier solvers run internally.</div></details>
 </div></body></html>
